@@ -451,6 +451,7 @@ var operators = {
       );
     },
     valueSources: ["value"],
+    elasticSearchQueryType: "wildcard",
   },
   starts_with: {
     label: "Starts with",

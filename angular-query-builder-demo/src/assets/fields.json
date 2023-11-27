@@ -1,0 +1,94 @@
+{
+  "dwords": {
+    "label": "Dwords",
+    "type": "number"
+  },
+  "fileIndex": {
+    "label": "FileIndex",
+    "type": "number"
+  },
+  "index": {
+    "label": "Index",
+    "type": "number"
+  },
+  "episode": {
+    "label": "Episode",
+    "type": "text"
+  },
+  "sessionId": {
+    "label": "SessionId",
+    "type": "text"
+  },
+  "subSource": {
+    "label": "SubSource",
+    "type": "text"
+  },
+  "source": {
+    "label": "Source",
+    "type": "text"
+  },
+  "type": {
+    "label": "Type",
+    "type": "text"
+  },
+  "streamName": {
+    "label": "StreamName",
+    "type": "text"
+  },
+  "_instance": {
+    "label": "Instace",
+    "type": "number"
+  },
+  "threadId": {
+    "label": "ThreadId",
+    "type": "number"
+  },
+  "core": {
+    "label": "Core",
+    "type": "number"
+  },
+  "_update": {
+    "label": "Update",
+    "type": "text"
+  },
+  "name": {
+    "label": "Name",
+    "type": "text"
+  },
+  "globalTimeStamp": {
+    "label": "GlobalTimeStamp",
+    "type": "text"
+  },
+  "id": {
+    "label": "Id",
+    "type": "number"
+  },
+  "timestamp": {
+    "label": "TimeStamp",
+    "type": "text"
+  },
+  "param1": {
+    "label": "param1",
+    "type": "number"
+  },
+  "param2": {
+    "label": "param2",
+    "type": "number"
+  },
+  "param3": {
+    "label": "param3",
+    "type": "number"
+  },
+  "param4": {
+    "label": "param4",
+    "type": "number"
+  },
+  "pararm5": {
+    "label": "param5",
+    "type": "number"
+  },
+  "param6": {
+    "label": "param6",
+    "type": "number"
+  }
+}
