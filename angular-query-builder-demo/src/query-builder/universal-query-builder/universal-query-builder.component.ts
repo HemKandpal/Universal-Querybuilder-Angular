@@ -182,10 +182,9 @@ export class UniversalQueryBuilderComponent {
       operator = operator == "Between" ? "<=" : operator;
       let field = query["field"];
       let lhs: any = { var: field };
-      if (query.caption) {
+      if (query.fieldInfo.type === "multi_level" || query.fieldInfo.type === "json_path") {
         lhs = { dynamic: query.caption };
       }
-      console.log(query.caption);
       if (field && query["value"]) {
         operator = (operator == "Contains") ? "#in" : operator;
         if (operator == "IsNull") {
