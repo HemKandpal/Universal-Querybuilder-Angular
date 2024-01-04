@@ -20,10 +20,16 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
-    "angular2-query-builder": "^0.6.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.13.0"
+    "zone.js": "~0.13.0",
+    "clone": "^2.1.2",
+    "immutable": "^3.8.2",
+    "json-logic-js": "^2.0.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "spel2js": "^0.2.8",
+    "sqlstring": "^2.3.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.8",
