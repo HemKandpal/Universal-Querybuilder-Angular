@@ -544,6 +544,16 @@ export class QueryBuilderComponent implements OnInit, OnChanges, ControlValueAcc
   }
 
   changeField(fieldValue: any, rule: Rule): void {
+    rule.parent = fieldValue.value;
+    rule.caption = "";
+    rule.subFieldInfo = null;
+    this._changeField(fieldValue, rule);
+  }
+  changeSubField(fieldValue: any, rule: Rule): void {
+    this._changeField(fieldValue, rule);
+    rule.caption = rule.parent + "." + rule.field;
+  }
+  _changeField(fieldValue: any, rule: Rule): void {
     rule.field = fieldValue.value;
     if (this.disabled) {
       return;

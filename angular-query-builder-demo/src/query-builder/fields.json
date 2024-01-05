@@ -102,5 +102,13 @@
   "json_path": {
     "type": "json_path",
     "children": null
+  },
+  "stringValue": {
+    "type": "text",
+    "children": null
+  },
+  "numericValue": {
+    "type": "number",
+    "children": null
   }
 }

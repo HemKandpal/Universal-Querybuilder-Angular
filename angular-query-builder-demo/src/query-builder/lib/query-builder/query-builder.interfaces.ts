@@ -13,6 +13,10 @@ export interface Rule {
   operator?: string;
   entity?: string;
   fieldInfo?: any;
+  subFieldInfo?: any;
+  caption?: string;
+  parent?: string;
+
 }
 
 export interface Option {

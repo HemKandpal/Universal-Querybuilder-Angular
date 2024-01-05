@@ -240,7 +240,7 @@ export class UniversalQueryBuilderComponent {
       let children = field.children;
       let defaultValue: any = [];
       let operators = this.typeOperatorMap[type];
-      if (label && operators && type) {
+      if (operators && type) {
         atrbts[key] = { defaultValue: defaultValue, name: label, type: type, operators: operators, children: (children) ? this.convertJsonToArray(this.getConfig(children)) : [] }
       }
     }

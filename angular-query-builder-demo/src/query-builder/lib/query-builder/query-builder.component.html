@@ -193,41 +193,57 @@
 
             <ng-template #defaultField>
               <div [ngClass]="getClassNames('fieldControlSize')">
-                <select
-                  [ngClass]="getClassNames('fieldControl')"
-                  [(ngModel)]="rule.fieldInfo"
-                  (ngModelChange)="changeField($event, rule)"
-                  [disabled]="disabled"
-                >
-                  <option
-                    *ngFor="let field of getFields(rule.entity)"
-                    [ngValue]="field"
-                  >
-                    {{ field.name }}
-                  </option>
-                </select>
+                <table>
+                  <tr>
+                    <td>
+                      <select
+                        [ngClass]="getClassNames('fieldControl')"
+                        [(ngModel)]="rule.fieldInfo"
+                        (ngModelChange)="changeField($event, rule)"
+                        [disabled]="disabled"
+                      >
+                        <option
+                          *ngFor="let field of getFields(rule.entity)"
+                          [ngValue]="field"
+                          [hidden]="!field.name"
+                        >
+                          {{ field.name }}
+                        </option>
+                      </select>
+                    </td>
+                    <td>
+                      <input
+                        [ngClass]="getClassNames('inputControl')"
+                        [(ngModel)]="rule.caption"
+                        [disabled]="disabled"
+                        type="text"
+                        *ngIf="
+                          rule.fieldInfo && rule.fieldInfo.type === 'json_path'
+                        "
+                      />
+                      <select
+                        [ngClass]="getClassNames('fieldControl')"
+                        [(ngModel)]="rule.subFieldInfo"
+                        (ngModelChange)="changeSubField($event, rule)"
+                        [disabled]="disabled"
+                        *ngIf="
+                          rule.fieldInfo &&
+                          rule.fieldInfo.type === 'multi_level'
+                        "
+                      >
+                        <option
+                          *ngFor="let child of rule.fieldInfo.children"
+                          [ngValue]="child"
+                        >
+                          {{ child.name }}
+                        </option>
+                      </select>
+                    </td>
+                    <td></td>
+                  </tr>
+                </table>
               </div>
-              <input
-                [ngClass]="getClassNames('inputControl')"
-                [(ngModel)]="rule.caption"
-                [disabled]="disabled"
-                type="text"
-                *ngIf="rule.fieldInfo && rule.fieldInfo.type === 'json_path'"
-              />
 
-              <select
-                [ngClass]="getClassNames('fieldControl')"
-                [(ngModel)]="rule.caption"
-                [disabled]="disabled"
-                *ngIf="rule.fieldInfo && rule.fieldInfo.type === 'multi_level'"
-              >
-                <option
-                  *ngFor="let child of rule.fieldInfo.children"
-                  [ngValue]="rule.fieldInfo.value + '.' + child.value"
-                >
-                  {{ child.name }}
-                </option>
-              </select>
               <!-- <p
                 *ngIf="rule.fieldInfo && rule.fieldInfo.type === 'multi_level'"
                 class="output"
