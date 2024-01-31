@@ -7,7 +7,8 @@ SQL-> Work In Progress
 MongoDb-> Work IN Progress
 
 # Example
-![image](https://github.com/HemKandpal/Universal-Querybuilder-Angular/assets/131157188/58ada720-2375-41a2-bf17-b6177de5a1df)
+![image](https://github.com/HemKandpal/Universal-Querybuilder-Angular/assets/131157188/a1ad750a-9d8b-4775-b695-e2aeb39df13e)
+
 
 
 # Compatibility
