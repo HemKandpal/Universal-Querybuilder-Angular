@@ -1,0 +1,96 @@
+<div style="background-color: rgb(248, 249, 249)">
+  <h2></h2>
+  <br />
+  <query-builder
+    [formControl]="queryCtrl"
+    [config]="currentConfig"
+    [allowRuleset]="allowRuleset"
+    [allowCollapse]="allowCollapse"
+    [persistValueOnFieldChange]="persistValueOnFieldChange"
+    [parentChangeCallback]="populateJsonlogicCallback"
+    [parentTouchedCallback]="populateJsonlogicCallback"
+  >
+    <ng-container
+      *queryInput="
+        let rule;
+        type: 'textarea';
+        let getDisabledState = getDisabledState
+      "
+    >
+      <textarea
+        class="text-input text-area"
+        [(ngModel)]="rule.value"
+        [disabled]="getDisabledState()"
+        placeholder="Custom Textarea"
+      ></textarea>
+    </ng-container>
+    <!-- <ng-container *queryInput="let rule; type: 'number'">
+      <ng-container *ngIf="rule.operator === 'Between'">
+        <input
+          [(ngModel)]="rule.value[0]"
+          type="number"
+          (ngModelChange)="populateJsonlogic()"
+        />
+        to
+        <input
+          [(ngModel)]="rule.value[1]"
+          type="number"
+          (ngModelChange)="populateJsonlogic()"
+        />
+      </ng-container>
+      <ng-container *ngIf="rule.operator !== 'Between'">
+        <input
+          [(ngModel)]="rule.value"
+          type="number"
+          (ngModelChange)="populateJsonlogic()"
+        />
+      </ng-container>
+    </ng-container> -->
+  </query-builder>
+  <br />
+  <div *ngIf="false">
+    <div class="row">
+      <!-- <p class="col-6">Control Valid (Vanilla): {{ queryCtrl.valid }}</p> -->
+      <div class="col-6">
+        <!-- <label><input type="checkbox" (change)=switchModes($event)>Entity Mode</label> -->
+      </div>
+    </div>
+    <div class="row">
+      <!-- <p class="col-6">Control Touched (Vanilla): {{ queryCtrl.touched }}</p> -->
+      <div class="col-6">
+        <!-- <label><input type="checkbox" (change)=changeDisabled($event)>Disabled</label> -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <!-- <label><input type="checkbox" [(ngModel)]='allowRuleset'>Allow Ruleset</label> -->
+      </div>
+      <div class="col-6">
+        <!-- <label><input type="checkbox" [(ngModel)]='allowCollapse'>Allow Collapse</label> -->
+      </div>
+      <div class="col-6">
+        <!-- <label><input type="checkbox" [(ngModel)]='persistValueOnFieldChange'>Persist Values on Field Change</label> -->
+      </div>
+    </div>
+    <button
+      cButton
+      color="primary"
+      (click)="populateJsonlogic()"
+      *ngIf="showQueryGenerator"
+    >
+      Get Query
+    </button>
+    <textarea readonly *ngIf="showQueryBuilder" class="output">{{
+      expression | json
+    }}</textarea>
+    <br />
+    <textarea readonly *ngIf="showJsonlogic" class="output">{{
+      varJsonLogic | json
+    }}</textarea>
+    <br />
+    <textarea readonly *ngIf="showDsl" class="output">{{
+      dsl | json
+    }}</textarea>
+    <br />
+  </div>
+</div>

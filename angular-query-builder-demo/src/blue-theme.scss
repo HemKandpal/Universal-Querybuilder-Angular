@@ -1,0 +1,288 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$tools20-app-primary: mat.define-palette(mat.$indigo-palette);
+// Light Theme Text
+$dark-text: #000000;
+$dark-primary-text: rgba($dark-text, 0.87);
+$dark-accent-text: rgba($dark-primary-text, 0.54);
+$dark-disabled-text: rgba($dark-primary-text, 0.38);
+$dark-dividers: rgba($dark-primary-text, 0.12);
+$dark-focused: rgba($dark-primary-text, 0.12);
+// Dark Theme text
+$light-text: #ffffff;
+$light-primary-text: $light-text;
+$light-accent-text: rgba($light-primary-text, 0.7);
+$light-disabled-text: rgba($light-primary-text, 0.5);
+$light-dividers: rgba($light-primary-text, 0.12);
+$light-focused: rgba($light-primary-text, 0.12);
+
+$mat-accent: (
+    main: #0e75ef,
+    lighter: #b7d6fa,
+    darker: #0858e8,
+    200: #0e75ef,
+    // For slide toggle,
+    contrast: (main: $light-primary-text,
+        lighter: $dark-primary-text,
+        darker: $light-primary-text,
+    ),
+);
+$tools20-app-accent: mat.define-palette($mat-accent, main, lighter, darker);
+
+// The warn palette is optional (defaults to red).
+$tools20-app-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$tools20-app-theme: mat.define-light-theme((color: (primary: $tools20-app-primary,
+                accent: $tools20-app-accent,
+                warn: $tools20-app-warn,
+            ),
+        ));
+
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($tools20-app-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+
+$dark-blue: (
+    50 : #e2eaf4,
+    100 : #b6cbe5,
+    200 : #85a9d3,
+    300 : #5486c1,
+    400 : #2f6cb4,
+    500 : #0a52a7,
+    600 : #094b9f,
+    700 : #074196,
+    800 : #05388c,
+    900 : #03287c,
+    A100 : #a9beff,
+    A200 : #7697ff,
+    A400 : #4370ff,
+    A700 : #2a5dff,
+    contrast: (50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+$light-blue: (
+    main: #0e75ef,
+    lighter: #b7d6fa,
+    darker: #0858e8,
+    200: #0e75ef,
+    // For slide toggle,
+    contrast : (main: $light-primary-text,
+        lighter: $dark-primary-text,
+        darker: $light-primary-text,
+    )
+);
+$my-app-primary: mat.define-palette($dark-blue);
+$my-app-accent: mat.define-palette($light-blue, main, lighter, darker);
+$my-app-warn: mat.define-palette(mat.$orange-palette);
+$my-app-error: mat.define-palette(mat.$red-palette);
+$tools20-app-typography: mat.define-typography-config($font-family: 'Calibri, "Trebuchet MS", sans-serif'
+    );
+$my-app-theme: mat.define-light-theme((color: (primary: $my-app-primary,
+                accent: $my-app-accent,
+                warn: $my-app-warn ),
+            typography: $tools20-app-typography));
+
+
+$prime-color: #0a52a7;
+@include mat.all-component-themes($my-app-theme);
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 26px;
+}
+
+.bread-crumb-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toolbar div.bread-crumb-container>app-select-box:first-of-type>.select-box-container>.bread-crumb-item {
+    background: #fff;
+    border-left: solid thin $prime-color;
+
+    &:before {
+        background: #fff;
+    }
+
+    .dx-texteditor-input {
+        color: $prime-color;
+    }
+}
+
+.bread-crumb-item {
+    fa-icon.ng-fa-icon {
+        cursor: pointer;
+    }
+
+    width: auto;
+    padding: 0;
+    padding-left: 19px;
+    height: 26px;
+    line-height: 26px;
+    border-top: solid thin $prime-color;
+    border-bottom: solid thin $prime-color;
+    background: #deeaf8;
+    position: relative;
+    color: rgba(10, 104, 214, 0.56);
+
+    &:after {
+        border-top: solid thin $prime-color !important;
+        border-right: solid thin $prime-color !important;
+    }
+
+
+
+    .dx-texteditor-input {
+        padding: 0px !important;
+        color: $prime-color;
+        font-weight: bold;
+        font-size: 13px;
+        min-height: auto;
+        height: 100%;
+    }
+
+    .dx-dropdowneditor-input-wrapper .dx-texteditor {
+        display: block !important;
+        height: 100%;
+    }
+
+    .dx-texteditor-input-container.dx-tag-container.dx-native-click {
+        height: 100%;
+        padding: 0;
+    }
+
+    .dx-dropdownbox {
+        height: 100%;
+        border: none;
+        background: transparent;
+    }
+
+    .dx-placeholder {
+        line-height: 10px;
+        color: rgba(10, 104, 214, 0.56);
+        font-weight: bold;
+    }
+
+    >* {
+        position: relative;
+        z-index: 2;
+    }
+
+    .dx-dropdowneditor-button {
+        width: 18px;
+        min-width: 18px;
+    }
+
+    .dx-dropdowneditor-icon {
+        width: 14px;
+    }
+}
+
+
+.menuBtn {
+    color: $prime-color;
+    background-color: none;
+    background: none;
+}
+
+.title {
+    color: $prime-color;
+}
+
+.version {
+    background: lighten($prime-color, 25%) !important;
+    color: #fff;
+}
+
+::ng-deep {
+    .bread-crumb-item {
+
+        .dx-texteditor.dx-editor-filled.dx-state-disabled .dx-texteditor-input,
+        .dx-texteditor.dx-editor-filled.dx-state-readonly .dx-texteditor-input,
+        .dx-texteditor.dx-editor-filled.dx-state-readonly.dx-state-hover .dx-texteditor-input {
+            color: $prime-color;
+        }
+    }
+}
+
+mat-button-toggle-group.mat-button-toggle-group {
+    margin-right: 11px;
+    border-color: #0a52a7;
+    border-radius: 100px;
+}
+
+span.mat-button-toggle-label-content {
+    line-height: 26px !important;
+    padding: 0px 8px !important;
+}
+
+.mat-button-toggle {
+    color: #0a52a7;
+    padding: 0px 8px;
+    border-left: 0 !important;
+}
+
+.mat-button-toggle-checked {
+    background: #0a52a7;
+    border-left-color: #0a52a7;
+    color: #fff !important;
+    font-weight: 500;
+    border-radius: 100px;
+}
+
+
+
+.dx-button-mode-contained .dx-icon {
+    color: $prime-color;
+}
+
+.dx-button-mode-container.dx-button-default {
+    background: $prime-color;
+}
+
+.dx-popup-wrapper .dx-state-focused.dx-overlay-content {
+  border-color: rgb(221, 221, 221);
+}

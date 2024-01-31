@@ -1,94 +1,88 @@
 {
-  "dwords": {
-    "label": "Dwords",
-    "type": "number"
-  },
   "fileIndex": {
     "label": "FileIndex",
-    "type": "number"
+    "type": "number",
+    "children": null
   },
   "index": {
     "label": "Index",
-    "type": "number"
+    "type": "number",
+    "children": null
   },
   "episode": {
     "label": "Episode",
-    "type": "text"
-  },
-  "sessionId": {
-    "label": "SessionId",
-    "type": "text"
+    "type": "number",
+    "children": null
   },
   "subSource": {
     "label": "SubSource",
-    "type": "text"
+    "type": "text",
+    "children": null
   },
   "source": {
     "label": "Source",
-    "type": "text"
+    "type": "text",
+    "children": null
   },
   "type": {
     "label": "Type",
-    "type": "text"
-  },
-  "streamName": {
-    "label": "StreamName",
-    "type": "text"
+    "type": "text",
+    "children": null
   },
   "_instance": {
     "label": "Instace",
-    "type": "number"
+    "type": "number",
+    "children": null
   },
   "threadId": {
     "label": "ThreadId",
-    "type": "number"
+    "type": "number",
+    "children": null
   },
   "core": {
     "label": "Core",
-    "type": "number"
-  },
-  "_update": {
-    "label": "Update",
-    "type": "text"
+    "type": "number",
+    "children": null
   },
   "name": {
     "label": "Name",
-    "type": "text"
-  },
-  "globalTimeStamp": {
-    "label": "GlobalTimeStamp",
-    "type": "text"
-  },
-  "id": {
-    "label": "Id",
-    "type": "number"
+    "type": "text",
+    "children": null
   },
   "timestamp": {
     "label": "TimeStamp",
-    "type": "text"
+    "type": "number",
+    "children": null
   },
-  "param1": {
-    "label": "param1",
-    "type": "number"
+  "splittedParameters": {
+    "label": "SplittedParameters",
+    "type": "multi_level",
+    "children": {
+      "name": { "label": "Name", "type": "string" },
+      "stringValue": {
+        "label": "StringValue",
+        "type": "string"
+      },
+      "numericValue": {
+        "label": "NumericValue",
+        "type": "number"
+      }
+    }
   },
-  "param2": {
-    "label": "param2",
-    "type": "number"
+  "other": {
+    "type": "json_path",
+    "children": null
   },
-  "param3": {
-    "label": "param3",
-    "type": "number"
+  "json_path": {
+    "type": "json_path",
+    "children": null
   },
-  "param4": {
-    "label": "param4",
-    "type": "number"
+  "stringValue": {
+    "type": "text",
+    "children": null
   },
-  "pararm5": {
-    "label": "param5",
-    "type": "number"
-  },
-  "param6": {
-    "label": "param6",
-    "type": "number"
+  "numericValue": {
+    "type": "number",
+    "children": null
   }
 }

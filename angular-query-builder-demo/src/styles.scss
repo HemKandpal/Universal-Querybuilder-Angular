@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "material-icons/iconfont/material-icons.css";
+
+@import "scss/devextreme.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-drawer-content {
+  margin-right: 0px !important;
+}
+
+.dx-command-select {
+  max-width: 32px !important;
+  min-width: 32px !important;
+  width: 32px !important;
+}
+
+.dx-datagrid-checkbox-size .dx-checkbox-icon {
+  height: 14px;
+  width: 14px;
+  margin: 1px;
+}
+
+.dx-datagrid-table .dx-data-row.dx-state-hover:not(.dx-selection):not(.dx-row-inserted):not(.dx-row-removed):not(.dx-edit-row):not(.dx-row-focused) > td:not(.dx-focused) {
+  color: inherit;
+}

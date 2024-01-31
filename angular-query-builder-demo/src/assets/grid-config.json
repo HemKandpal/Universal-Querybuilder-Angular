@@ -1,0 +1,605 @@
+{
+  "config": {
+    "advancedSearchFields": [
+      {
+        "label": "_instance",
+        "dataType": "number"
+      },
+      {
+        "label": "id",
+        "dataType": "string"
+      },
+      {
+        "label": "index",
+        "dataType": "number"
+      },
+      {
+        "label": "name",
+        "dataType": "string"
+      },
+      {
+        "label": "parameters",
+        "dataType": "string"
+      },
+      {
+        "label": "subSource",
+        "dataType": "string"
+      },
+      {
+        "label": "fileIndex",
+        "dataType": "number"
+      },
+      {
+        "label": "episode",
+        "dataType": "number"
+      },
+      {
+        "label": "source",
+        "dataType": "string"
+      },
+      {
+        "label": "type",
+        "dataType": "string"
+      },
+      {
+        "label": "threadId",
+        "dataType": "number"
+      },
+      {
+        "label": "core",
+        "dataType": "number"
+      },
+      {
+        "label": "processDuration",
+        "dataType": "number"
+      },
+      {
+        "label": "timestamp",
+        "dataType": "string"
+      },
+      {
+        "label": "globalTimestamp",
+        "dataType": "string"
+      },
+      {
+        "label": "linkedIndex",
+        "dataType": "number"
+      },
+      {
+        "label": "splittedParameters.stringValue",
+        "dataType": "specialString"
+      },
+      {
+        "label": "splittedParameters.numericValue",
+        "dataType": "number"
+      }
+    ],
+    "operatorList": {
+      "string": [
+        {
+          "label": "="
+        },
+        {
+          "label": "!="
+        },
+        {
+          "label": "LIKE"
+        },
+        {
+          "label": "NOT LIKE"
+        }
+      ],
+      "number": [
+        {
+          "label": "="
+        },
+        {
+          "label": "!="
+        },
+        {
+          "label": "<"
+        },
+        {
+          "label": ">"
+        },
+        {
+          "label": "<="
+        },
+        {
+          "label": ">="
+        }
+      ],
+      "specialString": [
+        {
+          "label": "="
+        },
+        {
+          "label": "!="
+        },
+        {
+          "label": "<"
+        },
+        {
+          "label": ">"
+        },
+        {
+          "label": "<="
+        },
+        {
+          "label": ">="
+        }
+      ],
+      "default": [
+        {
+          "label": "="
+        },
+        {
+          "label": "!="
+        },
+        {
+          "label": "<"
+        },
+        {
+          "label": ">"
+        },
+        {
+          "label": "<="
+        },
+        {
+          "label": ">="
+        },
+        {
+          "label": "LIKE"
+        },
+        {
+          "label": "NOT LIKE"
+        }
+      ]
+    },
+    "columns": [
+      {
+        "label": "",
+        "dataField": "isBookmark",
+        "width": 20,
+        "constraints": {
+          "dataType": "string",
+          "isVisible": true,
+          "allowResizing": false,
+          "allowSorting": false,
+          "allowFiltering": false,
+          "allowHeaderFiltering": false,
+          "allowExport": false,
+          "cellTemplate": "bookmarkTemplate",
+          "allowSimpleQuery": false,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "Instance",
+        "dataField": "_instance",
+        "width": 100,
+        "constraints": {
+          "dataType": "number",
+          "isVisible": true,
+          "allowResizing": false,
+          "allowSorting": false,
+          "allowFiltering": false,
+          "allowHeaderFiltering": false,
+          "allowExport": true,
+          "allowSimpleQuery": true,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "Id",
+        "dataField": "id",
+        "constraints": {
+          "dataType": "string",
+          "isVisible": false,
+          "allowResizing": false,
+          "allowSorting": false,
+          "allowFiltering": false,
+          "allowHeaderFiltering": false,
+          "allowExport": true,
+          "allowSimpleQuery": false,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "Index",
+        "dataField": "index",
+        "constraints": {
+          "dataType": "string",
+          "isVisible": false,
+          "allowResizing": false,
+          "allowSorting": false,
+          "allowFiltering": false,
+          "allowHeaderFiltering": false,
+          "allowExport": true,
+          "allowSimpleQuery": false,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "Name",
+        "dataField": "name",
+        "width": 200,
+        "constraints": {
+          "dataType": "string",
+          "isVisible": true,
+          "allowResizing": true,
+          "allowSorting": true,
+          "allowFiltering": true,
+          "allowHeaderFiltering": true,
+          "allowExport": true,
+          "allowSimpleQuery": true,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "Parameters",
+        "dataField": "parameters",
+        "width": 200,
+        "constraints": {
+          "dataType": "string",
+          "isVisible": true,
+          "allowResizing": true,
+          "allowSorting": true,
+          "allowFiltering": true,
+          "allowHeaderFiltering": false,
+          "allowExport": true,
+          "allowSimpleQuery": true,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "Sub Source",
+        "dataField": "subSource",
+        "constraints": {
+          "dataType": "string",
+          "isVisible": true,
+          "allowResizing": true,
+          "allowSorting": true,
+          "allowFiltering": true,
+          "allowHeaderFiltering": true,
+          "allowExport": true,
+          "allowSimpleQuery": true,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "File Index",
+        "dataField": "fileIndex",
+        "constraints": {
+          "dataType": "number",
+          "isVisible": true,
+          "allowResizing": true,
+          "allowSorting": false,
+          "allowFiltering": true,
+          "allowHeaderFiltering": false,
+          "allowExport": true,
+          "allowSimpleQuery": false,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "Episode",
+        "dataField": "episode",
+        "constraints": {
+          "dataType": "number",
+          "isVisible": true,
+          "allowResizing": true,
+          "allowSorting": false,
+          "allowFiltering": true,
+          "allowHeaderFiltering": false,
+          "allowExport": true,
+          "allowSimpleQuery": true,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "Source",
+        "dataField": "source",
+        "constraints": {
+          "dataType": "string",
+          "isVisible": true,
+          "allowResizing": true,
+          "allowSorting": false,
+          "allowFiltering": true,
+          "allowHeaderFiltering": true,
+          "allowExport": true,
+          "allowSimpleQuery": true,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "Type",
+        "dataField": "type",
+        "constraints": {
+          "dataType": "string",
+          "isVisible": true,
+          "allowResizing": true,
+          "allowSorting": false,
+          "allowFiltering": true,
+          "allowHeaderFiltering": false,
+          "allowExport": true,
+          "allowSimpleQuery": true,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "Thread Id",
+        "dataField": "threadId",
+        "constraints": {
+          "dataType": "number",
+          "isVisible": true,
+          "allowResizing": true,
+          "allowSorting": false,
+          "allowFiltering": true,
+          "allowHeaderFiltering": false,
+          "allowExport": true,
+          "allowSimpleQuery": true,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "Core",
+        "dataField": "core",
+        "constraints": {
+          "dataType": "number",
+          "isVisible": true,
+          "allowResizing": true,
+          "allowSorting": false,
+          "allowFiltering": true,
+          "allowHeaderFiltering": false,
+          "allowExport": true,
+          "allowSimpleQuery": true,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "Process Duration",
+        "dataField": "processDuration",
+        "constraints": {
+          "dataType": "number",
+          "isVisible": true,
+          "allowResizing": true,
+          "allowSorting": false,
+          "allowFiltering": true,
+          "allowHeaderFiltering": false,
+          "allowExport": true,
+          "allowSimpleQuery": false,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "Timestamp",
+        "dataField": "timestamp",
+        "constraints": {
+          "dataType": "number",
+          "isVisible": true,
+          "allowResizing": true,
+          "allowSorting": false,
+          "allowFiltering": true,
+          "allowHeaderFiltering": false,
+          "allowExport": true,
+          "allowSimpleQuery": false,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "Global TimeStamp",
+        "dataField": "globalTimestamp",
+        "constraints": {
+          "dataType": "string",
+          "isVisible": false,
+          "allowResizing": true,
+          "allowSorting": false,
+          "allowFiltering": false,
+          "allowHeaderFiltering": false,
+          "allowExport": true,
+          "allowSimpleQuery": false,
+          "alignment": "left"
+        }
+      },
+      {
+        "label": "Linked Index",
+        "dataField": "linkedIndex",
+        "constraints": {
+          "dataType": "number",
+          "isVisible": false,
+          "allowResizing": true,
+          "allowSorting": false,
+          "allowFiltering": false,
+          "allowHeaderFiltering": false,
+          "allowExport": true,
+          "allowSimpleQuery": false,
+          "alignment": "left"
+        }
+      }
+    ],
+    "templates": {
+      "cellTemplates": [
+        {
+          "templateRefName": "bookmarkTemplate",
+          "templateRefEle": null
+        }
+      ],
+      "toolbarTemplates": [
+        {
+          "templateRefName": "filterToolbarTemplate",
+          "templateRefEle": null
+        },
+        {
+          "templateRefName": "toolbarSearchTemplate",
+          "templateRefEle": null
+        },
+        {
+          "templateRefName": "conditionalColorToolbarTemplate",
+          "templateRefEle": null
+        }
+      ]
+    },
+    "settings": {
+      "height": "100%",
+      "focusedRowEnabled": true,
+      "focusedRowKey": 1,
+      "autoNavigateToFocusedRow": true,
+      "showBorders": true,
+      "hoverStateEnabled": true,
+      "allowColumnReordering": true,
+      "allowColumnResizing": true,
+      "columnResizingMode": "widget",
+      "columnAutoWidth": true,
+      "remoteOperations": true,
+      "sortMode": "none",
+      "columnChooser": {
+        "enableColumnChooser": true
+      },
+      "headerFilter": {
+        "enableHeaderFilter": false,
+        "allowSearch": true
+      },
+      "selection": {
+        "enableSelection": true,
+        "checkBoxesMode": "never",
+        "selectAllMode": "page",
+        "selectionMode": "multiple"
+      },
+      "scrolling": {
+        "mode": "standard",
+        "columnRenderingMode": "virtual",
+        "rowRenderingMode": "virtual",
+        "preloadEnabled": false,
+        "renderAsync": false
+      },
+      "paging": {
+        "enabled": true,
+        "pageIndex": 0,
+        "pageSize": 500
+      },
+      "pager": {
+        "enabled": true,
+        "allowedPageSizes": [
+          200,
+          500,
+          1000,
+          1500,
+          2000
+        ],
+        "displayMode": "full",
+        "infoText": "Page {0} of {1} ({2} records)",
+        "showInfo": true,
+        "showNavigationButtons": true,
+        "showPageSizeSelector": true
+      },
+      "stateStoring": {
+        "enabled": true,
+        "type": "custom"
+      },
+      "toolbar": {
+        "items": [
+          {
+            "template": "filterToolbarTemplate"
+          },
+          {
+            "icon": "fa-solid fa-bookmark",
+            "hint": "Bookmarks",
+            "key": "bookmarks",
+            "location": "before",
+            "isDefaultEvent": false
+          },
+          {
+            "template": "conditionalColorToolbarTemplate"
+          },
+          {
+            "template": "toolbarSearchTemplate"
+          },
+          {
+            "icon": "fa-solid fa-book-bookmark",
+            "hint": "Add Bookmark",
+            "key": "add_bookmark",
+            "location": "after",
+            "isDefaultEvent": false
+          },
+          {
+            "icon": "fa-solid fa-columns",
+            "hint": "Column Chooser",
+            "key": "column_chooser",
+            "location": "after",
+            "isDefaultEvent": true
+          },
+          {
+            "icon": "fa-solid fa-file-export",
+            "hint": "Export Data",
+            "key": "export_data",
+            "location": "after",
+            "isDefaultEvent": false
+          }
+        ]
+      },
+      "contextMenu": {
+        "enabled": true,
+        "type": "rowType",
+        "items": [
+          {
+            "text": "Search using this expression",
+            "icon": "fa-brands fa-searchengin text-muted"
+          },
+          {
+            "text": "Copy to clipboard",
+            "icon": "fa-solid fa-clipboard text-muted"
+          },
+          {
+            "text": "Color rows matching query",
+            "icon": "fa-solid fa-paintbrush text-muted"
+          },
+          {
+            "text": "Go to next episode (1)",
+            "icon": "fa-solid fa-forward-step text-muted"
+          },
+          {
+            "text": "Go to last episode (16)",
+            "icon": "fa-solid fa-forward-fast text-muted"
+          }
+        ]
+      }
+    },
+    "keyExp": "_instance",
+    "events": {
+      "getInstance": "gridInitilizedEvent",
+      "dataSource": "getStreamLogsEvent",
+      "onRowPrepared": "onRowPreparedEvent",
+      "toolbarClick": "toolbarEvent",
+      "headerFilterDataSource": "getFilterData",
+      "contextMenuPreparing": "contextMenuPreparing",
+      "contextMenuClick": "contextMenuClickEvent",
+      "loadState": "loadStateEvent",
+      "saveState": "saveStateEvent"
+    },
+    "exportRecLimit": 1000000,
+    "colorRow": [
+      "#1a8917",
+      "#4a5950",
+      "#40bcaa",
+      "#2972a3",
+      "#ffc7ce",
+      "#fa354f",
+      "#ff7f27",
+      "#999999",
+      "#113c56"
+    ],
+    "bookmarkColors": [
+      "#e7cd16",
+      "#1a8917",
+      "#4a5950",
+      "#40bcaa",
+      "#2972a3",
+      "#ffc7ce",
+      "#fa354f",
+      "#ff7f27",
+      "#999999",
+      "#113c56"
+    ]
+  }
+}

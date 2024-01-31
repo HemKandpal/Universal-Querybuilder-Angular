@@ -1,0 +1,403 @@
+{
+    "sessionInfo": [
+        {
+            "displayName": "ID",
+            "fieldName": "_id",
+            "displayView": "string"
+        },
+        {
+            "displayName": "Description",
+            "fieldName": "description",
+            "displayView": "string"
+        },
+        {
+            "displayName": "Division",
+            "fieldName": "division",
+            "displayView": "string"
+        },
+        {
+            "displayName": "Product",
+            "fieldName": "product",
+            "displayView": "string"
+        },
+        {
+            "displayName": "State",
+            "fieldName": "sessionState",
+            "displayView": "state string (colored)"
+        }
+    ],
+    "sessionTimestamps": [
+        {
+            "displayName": "Init",
+            "fieldName": "initTimestamp",
+            "displayView": "timestamp"
+        },
+        {
+            "displayName": "Start",
+            "fieldName": "startTimestamp",
+            "displayView": "timestamp"
+        },
+        {
+            "displayName": "Finalize",
+            "fieldName": "finalizeTimestamp",
+            "displayView": "timestamp"
+        },
+        {
+            "displayName": "End",
+            "fieldName": "endTimestamp",
+            "displayView": "timestamp"
+        }
+    ],
+    "streams": [
+        {
+            "streamTypes": [
+                "RWR"
+            ],
+            "additionalInfo": [
+                {
+                    "displayName": "xTender",
+                    "fieldName": "xtender",
+                    "displayView": "string"
+                }
+            ],
+            "configuration": [
+                {
+                    "displayName": "RWR Path",
+                    "fieldName": "execute.rwrPath",
+                    "displayView": "path icon",
+                    "icon": "insert_drive_file"
+                },
+                {
+                    "displayName": "DCO Path",
+                    "fieldName": "execute.dcoPath",
+                    "displayView": "path icon",
+                    "icon": "insert_drive_file"
+                },
+                {
+                    "displayName": "FDO Path",
+                    "fieldName": "execute.fdoPath",
+                    "displayView": "path icon",
+                    "icon": "insert_drive_file"
+                },
+                {
+                    "displayName": "Range - TBD",
+                    "fieldNames": [
+                        "execute.mbCount",
+                        "execute.mbOffsetFromStart",
+                        "execute.mbOffsetFromEnd"
+                    ],
+                    "displayView": "Range view"
+                }
+            ],
+            "status": [
+                {
+                    "displayName": "Total number of rows",
+                    "fieldName": "transformer.lastElementInstance",
+                    "displayView": "number",
+                    "icon": "line_weight"
+                },
+                {
+                    "displayName": "Last file Index",
+                    "fieldName": "fileIndex",
+                    "displayView": "number",
+                    "icon": "fast_forward"
+                },
+                {
+                    "displayName": "Decoder version",
+                    "fieldName": "decoderVersion",
+                    "displayView": "number",
+                    "icon": "code"
+                },
+                {
+                    "displayName": "Push data size (packages)",
+                    "fieldName": "pushCount",
+                    "displayView": "number",
+                    "info": "Data size pushed by decoder",
+                    "icon": "data_usage"
+                },
+                {
+                    "displayName": "Pull data size (packages)",
+                    "fieldName": "pullCount",
+                    "displayView": "number",
+                    "info": "Data size pulled from the lab",
+                    "icon": "data_usage"
+                },
+                {
+                    "displayName": "Last Instance (packages)",
+                    "fieldName": "transformer.lastInstance",
+                    "displayView": "number",
+                    "info": "Data size transformed from the lab",
+                    "icon": "fast_forward"
+                }
+            ]
+        },
+        {
+            "streamTypes": [
+                "RWR"
+            ],
+            "streamName": "rwrFiltered",
+            "additionalInfo": [
+                {
+                    "displayName": "xTender",
+                    "fieldName": "xtender",
+                    "displayView": "string"
+                }
+            ],
+            "configuration": [
+                {
+                    "displayName": "RWR Path",
+                    "fieldName": "execute.rwrPath",
+                    "displayView": "path icon",
+                    "icon": "insert_drive_file"
+                },
+                {
+                    "displayName": "DCO Path",
+                    "fieldName": "execute.dcoPath",
+                    "displayView": "path icon",
+                    "icon": "insert_drive_file"
+                },
+                {
+                    "displayName": "Raw Query Filter",
+                    "fieldName": "execute.rawQueryExpression",
+                    "displayView": "scroll string",
+                    "info": "Filter on binary data before parsing",
+                    "icon": "filter_list"
+                },
+                {
+                    "displayName": "Query Filter",
+                    "fieldName": "execute.queryExpression",
+                    "displayView": "scroll string",
+                    "info": "Filter on parsed string data",
+                    "icon": "filter_list"
+                }
+            ],
+            "status": [
+                {
+                    "displayName": "Output Path",
+                    "fieldName": "outputPath",
+                    "displayView": "path icon",
+                    "icon": "insert_drive_file"
+                },
+                {
+                    "displayName": "Number Of Files",
+                    "fieldName": "numberOfFiles",
+                    "displayView": "number",
+                    "icon": "insert_drive_file"
+                },
+                {
+                    "displayName": "Input File Index",
+                    "fieldName": "fileIndex",
+                    "displayView": "number",
+                    "icon": "insert_drive_file"
+                },
+                {
+                    "displayName": "Output File Index",
+                    "fieldName": "outputFileIndex",
+                    "displayView": "number",
+                    "icon": "insert_drive_file"
+                },
+                {
+                    "displayName": "Decoder version",
+                    "fieldName": "decoderVersion",
+                    "displayView": "number",
+                    "icon": "insert_drive_file"
+                }
+            ]
+        },
+        {
+            "streamTypes": [
+                "FAD",
+                "FWT"
+            ],
+            "additionalInfo": [
+                {
+                    "displayName": "xTender",
+                    "fieldName": "xtender",
+                    "displayView": "string"
+                }
+            ],
+            "configuration": [
+                {
+                    "displayName": "FAD Path",
+                    "fieldName": "execute.fadPath",
+                    "displayView": "path icon",
+                    "icon": "insert_drive_file"
+                },
+                {
+                    "displayName": "Additional FAD Path",
+                    "fieldName": "execute.fadPathAdditional",
+                    "displayView": "path icon",
+                    "info": "Additional FAD path for merge",
+                    "icon": "insert_drive_file"
+                },
+                {
+                    "displayName": "SDB OR BOT Path",
+                    "fieldName": "execute.sdbPath",
+                    "displayView": "path icon",
+                    "icon": "insert_drive_file"
+                },
+                {
+                    "displayName": "DCO Path",
+                    "fieldName": "execute.dcoPath",
+                    "displayView": "path icon",
+                    "icon": "insert_drive_file"
+                },
+                {
+                    "displayName": "FDO Path",
+                    "fieldName": "execute.fdoPath",
+                    "displayView": "path icon",
+                    "icon": "insert_drive_file"
+                }
+            ],
+            "status": [
+                {
+                    "displayName": "Total number of rows",
+                    "fieldName": "trasformer.lastElementInstance",
+                    "displayView": "number",
+                    "icon": "line_weight"
+                },
+                {
+                    "displayName": "Decoder version",
+                    "fieldName": "decoderVersion",
+                    "displayView": "number",
+                    "icon": "bar_chart"
+                },
+                {
+                    "displayName": "Push data size (packages)",
+                    "fieldName": "pushCount",
+                    "displayView": "number",
+                    "info": "Data size pushed by decoder",
+                    "icon": "bar_chart"
+                },
+                {
+                    "displayName": "Pull data size (packages)",
+                    "fieldName": "pullCount",
+                    "displayView": "number",
+                    "info": "Data size pulled from the lab",
+                    "icon": "bar_chart"
+                },
+                {
+                    "displayName": "Last Instance (packages)",
+                    "fieldName": "transformer.lastInstance",
+                    "displayView": "number",
+                    "info": "Data size transformed from the lab",
+                    "icon": "bar_chart"
+                }
+            ]
+        }
+    ],
+    "recorders": [
+        {
+            "source": "RWR Recorder",
+            "additionalInfo": [
+                {
+                    "displayName": "xTender",
+                    "fieldName": "xtender",
+                    "displayView": "string"
+                }
+            ],
+            "configuration": [
+                {
+                    "displayName": "Serial Number",
+                    "fieldName": "init.serialNumber",
+                    "displayView": "string"
+                },
+                {
+                    "displayName": "RWR Path",
+                    "fieldName": "init.rwrPath",
+                    "displayView": "path icon"
+                },
+                {
+                    "displayName": "DCO Path",
+                    "fieldName": "init.dcoPath",
+                    "displayView": "path icon"
+                },
+                {
+                    "displayName": "ATB Mode",
+                    "fieldName": "init.atbMode",
+                    "displayView": "string"
+                },
+                {
+                    "displayName": "Voltage",
+                    "fieldName": "init.voltage",
+                    "displayView": "string"
+                },
+                {
+                    "displayName": "Recording Mode",
+                    "fieldName": "init.recordingMode",
+                    "displayView": "string"
+                },
+                {
+                    "displayName": "Speed Class",
+                    "fieldName": "init.speedClass",
+                    "displayView": "string"
+                },
+                {
+                    "displayName": "Requested Data Size [MB]",
+                    "fieldName": "init.mbCount",
+                    "displayView": "string"
+                },
+                {
+                    "displayName": "Requested Data Size [MB]",
+                    "fieldName": "finalize.mbCount",
+                    "displayView": "string"
+                },
+                {
+                    "displayName": "Filter query",
+                    "fieldName": "init.filterRawQueryExpression",
+                    "displayView": "string"
+                }
+            ],
+            "status": [
+                {
+                    "displayName": "Recorder Status",
+                    "fieldName": "Status",
+                    "displayView": "string",
+                    "icon": "bar_chart"
+                },
+                {
+                    "displayName": "HSSTP Link",
+                    "fieldName": "HSSTP Link",
+                    "displayView": "string",
+                    "icon": "link"
+                },
+                {
+                    "displayName": "Total Read Size (GB)",
+                    "fieldName": "Total Read Size [GB]",
+                    "displayView": "number",
+                    "icon": "storage"
+                },
+                {
+                    "displayName": "Troughput [MB/s]",
+                    "fieldName": "Recorder-->Storage Avg [MB/s]",
+                    "displayView": "number",
+                    "icon": "multiline_chart"
+                },
+                {
+                    "displayName": "Sync Error Counter",
+                    "fieldName": "Sync Error Counter",
+                    "displayView": "number",
+                    "icon": "error_outline"
+                },
+                {
+                    "displayName": "Parity Error Counter",
+                    "fieldName": "Parity Error Counter",
+                    "displayView": "number",
+                    "icon": "error_outline"
+                },
+                {
+                    "displayName": "Available Data Size [MB]",
+                    "fieldName": "Available Data Size [MB]",
+                    "displayView": "int",
+                    "icon": "storage"
+                },
+                {
+                    "displayName": "Retrieved Data Size [MB]",
+                    "fieldName": "Retrieved Data Size [MB]",
+                    "displayView": "int",
+                    "icon": "storage"
+                }
+            ]
+        }
+    ]
+}

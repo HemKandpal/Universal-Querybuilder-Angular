@@ -1,4 +1,5 @@
+<router-outlet></router-outlet>
 <app-universal-query-builder
-  [showJsonlogic]="true"
-  [showDsl]="true"
+  [onQueryCreated]="onElasticSearchCallback"
+  [expression]="rawQuery"
 ></app-universal-query-builder>

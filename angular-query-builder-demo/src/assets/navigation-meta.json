@@ -1,0 +1,103 @@
+{
+  "navigationMetadata": {
+    "mode": "side",
+    "applicationTitle": "xPlorer",
+    "applicationVersion": "4.0.0_b10"
+  },
+  "footerMetadata": {},
+  "employeeData": {
+    "FirstName": "",
+    "LastName": ""
+  },
+  "breadcrumbMetadata": {
+    "data": {
+      "children": [
+        {
+          "currLabel": "Home",
+          "currLink": "<a href=\"http://localhost:4200\" target=\"_noblank\">Link 1 - 1 - 1</a>",
+          "defaultSelection": 0,
+          "children": [
+            {
+              "currLabel": "Sessions",
+              "extLink": "http://127.0.0.1:8080/xplorer/console/ui/sessions",
+              "defaultSelection": 0,
+              "children": [
+                {
+                  "currLabel": "Opened Sessions",
+                  "currLink": "<a href=\"http://localhost:4200\" target=\"_noblank\">Link 1 - 1 - 1</a>",
+                  "children": [
+                    {
+                      "currLabel": "Session ID 1",
+                      "currLink": "<a href=\"http://localhost:4200\" target=\"_noblank\">Link 1 - 1 - 2</a>",
+                      "children": [],
+                      "defaultSelection": 0,
+                      "index": 0
+                    }
+                  ],
+                  "defaultSelection": 0,
+                  "index": 0
+                }
+              ],
+              "index": 0
+            }
+          ],
+          "index": 0
+        }
+      ],
+      "defaultSelection": 0
+    }
+  },
+  "breadcrumbChildren": [
+    {
+      "currLabel": "Base",
+      "currLink": "<a href=\"http://localhost:4200\" target=\"_noblank\">Link 1 - 1 - 2</a>",
+      "children": [
+        {
+          "currLabel": "rwr",
+          "currLink": "<a href=\"http://localhost:4200\" target=\"_noblank\">Link 1 - 1 - 2</a>",
+          "children": [],
+          "defaultSelection": -1,
+          "index": 0
+        }
+      ],
+      "defaultSelection": 0,
+      "index": 0
+    },
+    {
+      "currLabel": "Status",
+      "currLink": "<a href=\"http://localhost:4200\" target=\"_noblank\">Link 1 - 1 - 2</a>",
+      "children": [],
+      "defaultSelection": 0,
+      "index": 1
+    }
+  ],
+  "menuData": [
+    {
+      "id": 1,
+      "title": "Sessions",
+      "parentId": 0,
+      "extlink": "http://127.0.0.1:8080/xplorer/console/ui/sessions",
+      "expanded": true
+    },
+    {
+      "id": 2,
+      "title": "Opened Sessions",
+      "parentId": 1,
+      "expanded": true
+    }
+  ],
+  "menuChildren": [
+    {
+      "id": 1001,
+      "title": "Base",
+      "parentId": 0,
+      "currLink": ""
+    },
+    {
+      "id": 1002,
+      "title": "Status",
+      "parentId": 0,
+      "currLink": ""
+    }
+  ]
+}

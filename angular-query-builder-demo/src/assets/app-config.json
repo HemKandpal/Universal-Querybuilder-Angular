@@ -1,0 +1,6 @@
+{
+  "apiEndpoint": {
+    "elasticReaderAPIURL": "http://10.0.101.64:8099/esreader/reader/",
+    "metaDataAPIURL": "http://10.0.101.64:8080/xplorer/api/sessionMF/"
+  }
+}

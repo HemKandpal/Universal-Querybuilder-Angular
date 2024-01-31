@@ -1,22 +1,34 @@
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
+import { NgModule, importProvidersFrom } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { AppRoutingModule } from './app-routing.module';
+import { ColorPickerModule } from '@iplab/ngx-color-picker';
+import { QueryBuilderModule, UniversalQueryBuilderComponent } from 'src/app/features/query-builder/public-api';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { QueryBuilderModule } from '../query-builder//public-api';
-import { UniversalQueryBuilderComponent } from '../query-builder/universal-query-builder/universal-query-builder.component';
+
 
 @NgModule({
+  declarations: [
+    AppComponent,
+    UniversalQueryBuilderComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    NoopAnimationsModule,
-    QueryBuilderModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatDialogModule,
+    MatSidenavModule,
+    AppRoutingModule,
+    QueryBuilderModule,
   ],
-  declarations: [AppComponent, UniversalQueryBuilderComponent],
+  providers: [importProvidersFrom(ColorPickerModule)],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }

@@ -8,6 +8,7 @@
 
 # Node
 /node_modules
+node_modules
 npm-debug.log
 yarn-error.log
 
@@ -27,6 +28,9 @@ yarn-error.log
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+
+# Visual Studio
+.vs
 
 # Miscellaneous
 /.angular/cache
