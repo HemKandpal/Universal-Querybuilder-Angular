@@ -6,6 +6,11 @@ DSL (Elasticsearch)->Available
 SQL-> Work In Progress
 MongoDb-> Work IN Progress
 
+# Example
+![image](https://github.com/HemKandpal/Universal-Querybuilder-Angular/assets/131157188/a1ad750a-9d8b-4775-b695-e2aeb39df13e)
+
+
+
 # Compatibility
 
 Angular 9+
@@ -37,3 +42,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
