@@ -88,9 +88,18 @@
       varJsonLogic | json
     }}</textarea>
     <br />
-    <textarea readonly *ngIf="showDsl" class="output">{{
-      dsl | json
-    }}</textarea>
-    <br />
+    <div *ngIf="showDsl">
+      <hr />
+      <label>DSL</label>
+      <textarea readonly *ngIf="showDsl" class="output">{{
+        dsl | json
+      }}</textarea>
+    </div>
+    <div *ngIf="showSql">
+      <hr />
+      <label>SQL</label>
+      <textarea readonly class="output">{{ sql | json }}</textarea>
+      <br />
+    </div>
   </div>
 </div>

@@ -25,6 +25,7 @@ export class UniversalQueryBuilderComponent implements OnInit {
   public queryCtrl: FormControl | any;
   public varJsonLogic: any = {};
   public dsl: any = {};
+  public sql: any = {};
   // public entityConfig: QueryBuilderConfig = {
   //   entities: {
   //     physical: { name: 'Physical Attributes' },
@@ -159,10 +160,12 @@ export class UniversalQueryBuilderComponent implements OnInit {
   }
   populateJsonlogic() {
     const {
-      getDSLQuery
+      getDSLQuery, getSQLQuery
     } = Utils;
     this.varJsonLogic = {};
     this.dsl = getDSLQuery(this.query, fields, this.varJsonLogic);
+    this.sql = getSQLQuery(this.query, fields, this.varJsonLogic);
+    console.log(this.sql);
     if (this.onQueryCreated) {
       this.onQueryCreated(this.dsl, this.query);
     }

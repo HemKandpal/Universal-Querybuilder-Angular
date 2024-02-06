@@ -319,6 +319,7 @@ interface Export {
   _mongodbFormat(tree: ImmutableTree, config: Config): [Object | undefined, Array<string>];
   elasticSearchFormat(tree: ImmutableTree, config: Config, syntax?: "ES_6_SYNTAX" | "ES_7_SYNTAX"): Object | undefined;
   getDSLQuery(expression: any, fields: any, jsonLogicOut: any): any | undefined;
+  getSQLQuery(expression: any, fields: any, jsonLogicOut: any): any | undefined;
 
 }
 interface Autocomplete {
