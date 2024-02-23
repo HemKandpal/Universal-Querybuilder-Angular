@@ -2,9 +2,9 @@
 
 This project is inspired by ukrbublik/react-awesome-query-builder and Angular Querybuilder, to implement a generic query builder in Angular, that can be customised to generate given below queries.
 
-DSL (Elasticsearch)->Available
-SQL-> Work In Progress
-MongoDb-> Work IN Progress
+* DSL (Elasticsearch)->Available
+* SQL-> Work In Progress
+* MongoDb-> Work IN Progress
 
 # Example
 ![image](https://github.com/HemKandpal/Universal-Querybuilder-Angular/assets/131157188/a1ad750a-9d8b-4775-b695-e2aeb39df13e)
